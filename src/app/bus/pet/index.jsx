@@ -1,5 +1,6 @@
 import Counter from "./counter";
 import List from "./list";
+import SpecialList from "./specialList";
 
 const Pet = () => {
 	return (
@@ -7,6 +8,7 @@ const Pet = () => {
 			<h1>Pet</h1>
 			<Counter />
 			<List />
+			<SpecialList />
 		</>
 	);
 };
