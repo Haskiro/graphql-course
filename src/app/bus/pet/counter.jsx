@@ -7,7 +7,7 @@ const Counter = () => {
 		<>
 			{loading ? <p>Loading...</p> : null}
 			{error ? <p>Error : {error.message}</p> : null}
-			{data ? <p>Counter : {data.availablePets}</p> : null}
+			{data ? <p>Available Pets : {data.availablePets}</p> : null}
 		</>
 	);
 };
