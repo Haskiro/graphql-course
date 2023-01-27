@@ -24,10 +24,11 @@ const Login = () => {
 					Log in
 				</button>
 			</form>
-			{loading ? <p>Loading...</p> : null}
+			{loading ? <p>Идет проверка пользователя...</p> : null}
 			{error ? <p>Error : {error.message}</p> : null}
 			{authenticatedUser ? (
 				<p>
+					Добро пожаловать! <br />
 					Authenticated Account: name - {authenticatedUser.name},
 					username - {authenticatedUser.username}
 				</p>
