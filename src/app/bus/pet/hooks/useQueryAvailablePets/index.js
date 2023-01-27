@@ -11,5 +11,12 @@ const queryAvailablePets = loader("./gql/queryAvailablePets.graphql");
 
 export const useQueryAvailablePets = () => {
 	return useQuery(queryAvailablePets);
+
+	// Options
+	// {
+	// 	pollInterval: 500,
+	// 	skip: true
+	// }
+
 	// return useQuery(GET_AVAILABLE_PETS)
 };

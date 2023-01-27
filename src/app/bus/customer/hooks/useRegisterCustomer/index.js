@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const mutationCreateAccount = loader("./gql/mutationCreateAccount.graphql");
 
-export const useCustomer = () => {
+export const useRegisterCustomer = () => {
 	const [createAccount, { loading, error, data }] = useMutation(
 		mutationCreateAccount
 	);
