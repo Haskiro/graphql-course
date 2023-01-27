@@ -4,6 +4,7 @@ const Counter = () => {
 	const { loading, error, data, refetch, networkStatus } =
 		useQueryAvailablePets();
 	console.log(networkStatus);
+
 	return (
 		<>
 			<h2>Counter</h2>

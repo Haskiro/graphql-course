@@ -1,16 +1,18 @@
+import CheckInPet from "./chekInPet";
 import Counter from "./counter";
-import List from "./list";
 import Profile from "./profile";
-import SpecialList from "./specialList";
+// import List from "./list";
+// import SpecialList from "./specialList";
 
 const Pet = () => {
 	return (
 		<>
 			<h1>Pet</h1>
+			<CheckInPet />
 			<Profile />
 			<Counter />
-			<List />
-			<SpecialList />
+			{/* <List />
+			<SpecialList /> */}
 		</>
 	);
 };

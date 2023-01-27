@@ -1,6 +1,6 @@
 import { useMutation } from "@apollo/client";
 import { loader } from "graphql.macro";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useForm } from "../useForm";
 
 const mutationLogIn = loader("./gql/mutationLogIn.graphql");
