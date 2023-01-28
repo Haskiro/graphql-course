@@ -1,23 +1,16 @@
-import { useEffect } from "react";
 import { useForm } from "../customer/hooks/useForm";
-import { useQueryAllAvailablePets } from "./hooks/useQueryAllAvailablePets";
 
-const Dropdown = ({ checkIn }) => {
-	const { getAllAvailablePets, loading, error, pets } =
-		useQueryAllAvailablePets();
+const Dropdown = ({ submit, useHook }) => {
+	const { loading, error, pets } = useHook();
 
 	const { form, handleChange } = useForm({
-		checkIn: "",
+		check: "",
 	});
-
-	useEffect(() => {
-		getAllAvailablePets();
-	}, []);
 
 	const dropdown = pets ? (
 		<>
 			<select
-				name="checkIn"
+				name="check"
 				id="pet-select"
 				defaultValue=""
 				onChange={handleChange}
@@ -31,13 +24,12 @@ const Dropdown = ({ checkIn }) => {
 					</option>
 				))}
 			</select>
-			<button onClick={() => checkIn(form.checkIn)}>Check In</button>
+			<button onClick={() => submit(form.check)}>Check In</button>
 		</>
 	) : null;
 
 	return (
 		<>
-			<h2>Check In Pet</h2>
 			{loading ? <p>Loading...</p> : null}
 			{error ? <p>Error : {error.message}</p> : null}
 			{dropdown}

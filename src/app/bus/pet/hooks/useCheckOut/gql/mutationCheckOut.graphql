@@ -1,0 +1,11 @@
+mutation CheckOut($id: ID!) {
+	checkOut(id: $id) {
+		customer {
+			name
+		}
+		pet {
+			id
+			name
+		}
+	}
+}

@@ -1,0 +1,7 @@
+query allCheckedOutPets {
+	allCheckedOutPets {
+		id
+		name
+		weight
+	}
+}
