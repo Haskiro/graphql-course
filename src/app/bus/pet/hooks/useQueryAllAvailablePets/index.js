@@ -1,5 +1,6 @@
 import { useLazyQuery } from "@apollo/client";
 import { loader } from "graphql.macro";
+import { useState } from "react";
 
 // Queries
 const queryAllAvailablePets = loader("./gql/queryAllAvailablePets.graphql");
