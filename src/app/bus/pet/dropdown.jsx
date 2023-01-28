@@ -1,21 +1,13 @@
-import { useForm } from "../customer/hooks/useForm";
+import { useRef } from "react";
 
 const Dropdown = ({ submit, useHook }) => {
 	const { loading, error, pets } = useHook();
-
-	const { form, handleChange } = useForm({
-		check: "",
-	});
+	const select = useRef(null);
 
 	const dropdown = pets ? (
 		<>
-			<select
-				name="check"
-				id="pet-select"
-				defaultValue=""
-				onChange={handleChange}
-			>
-				<option value="" disabled selected>
+			<select name="check" id="pet-select" defaultValue="" ref={select}>
+				<option value="" disabled defaultChecked>
 					--Please choose a pet--
 				</option>
 				{pets.map(({ id, name, weight }) => (
@@ -24,7 +16,7 @@ const Dropdown = ({ submit, useHook }) => {
 					</option>
 				))}
 			</select>
-			<button onClick={() => submit(form.check)}>Check In</button>
+			<button onClick={() => submit(select.current.value)}>Submit</button>
 		</>
 	) : null;
 

@@ -6,6 +6,7 @@ mutation CheckOut($id: ID!) {
 		pet {
 			id
 			name
+			weight
 		}
 	}
 }

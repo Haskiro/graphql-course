@@ -10,8 +10,8 @@ const Pet = () => {
 		<>
 			<h1>Pet</h1>
 
-			<CheckOutPet />
 			<CheckInPet />
+			<CheckOutPet />
 			<Profile />
 			{/* <Counter /> */}
 			{/* <List />
