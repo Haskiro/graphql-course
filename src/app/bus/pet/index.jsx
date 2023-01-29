@@ -1,5 +1,6 @@
 import CheckInPet from "./chekInPet";
 import CheckOutPet from "./chekOutPet";
+import PetReturned from "./petReturned";
 // import Counter from "./counter";
 import Profile from "./profile";
 // import List from "./list";
@@ -12,6 +13,7 @@ const Pet = () => {
 
 			<CheckInPet />
 			<CheckOutPet />
+			<PetReturned />
 			<Profile />
 			{/* <Counter /> */}
 			{/* <List />
